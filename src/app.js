@@ -6,6 +6,7 @@ const helmet = require('helmet');
 const { NODE_ENV } = require('./config');
 const browserRouter = require('./browser-router');
 const validateToken = require('./validateToken');
+const errorHandler = require('./errorhandler');
 
 const app = express();
 const morganSetting = process.env.NODE_ENV === 'production'
@@ -19,6 +20,6 @@ app.use(validateToken);
 
 app.use(`/bookmarks`, browserRouter);
 
-app.use();
+app.use(errorHandler);
 
 module.exports = app;
