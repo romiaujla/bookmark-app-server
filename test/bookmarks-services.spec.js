@@ -40,17 +40,18 @@ describe(`Bookmarks Services`, ()=>{
         })
 
         it(`getAllBookmarks() resolves by returning all bookmarks`, ()=>{
-            return BookmarksServices.getBookmarks(db)
+            return BookmarksServices.getAllBookmarks(db)
                 .then((result) => {
                     expect(result).to.be.an('array');
                     expect(result.length).to.be.eql(testBookmarks.length);
+                    expect(result).to.deep.eql()
                 });
         });
 
-        it(`getBookmarksById() resolves and returns the requested bookmark`, ()=>{
+        it(`getById() resolves and returns the requested bookmark`, ()=>{
             const id = 2;
             const expectedBookmark = testBookmarks[id-1];
-            return BookmarksServices.getBookmarksById(db, id)
+            return BookmarksServices.getById(db, id)
                 .then((result) => {
                     expect(result).to.eql({
                         id: expectedBookmark.id,
@@ -67,15 +68,15 @@ describe(`Bookmarks Services`, ()=>{
     context(`Given the ${BOOKMARKS_TABLE} table has no data `, ()=>{
 
         it(`getAllBookmarks() resolves an empty table and returns an empty array`, ()=>{
-            return BookmarksServices.getBookmarks(db)
+            return BookmarksServices.getAllBookmarks(db)
                 .then((result) => {
                     expect(result).to.eql([]);
                 })
         });
 
-        it(`getBookmarksById() resolves and returns an empty array`, ()=>{
+        it(`getById() resolves and returns an empty array`, ()=>{
             const id = 2;
-            return BookmarksServices.getBookmarksById(db, id)
+            return BookmarksServices.getById(db, id)
                 .then((result)=>{
                     expect(result).to.eql(undefined);
                 })
@@ -86,7 +87,7 @@ describe(`Bookmarks Services`, ()=>{
                 title: `New Bookmark`,
                 url: `www.testbookmark.com`,
                 description: `Testing to see if it gets added with a new id`,
-                rating: `3.2`
+                rating: "3.2"
             }
             return BookmarksServices.insertBookmark(db, newBookmark)
                 .then((actual) => {
