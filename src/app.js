@@ -16,7 +16,7 @@ const morganSetting = process.env.NODE_ENV === 'production'
 app.use(morgan(morganSetting));
 app.use(cors());
 app.use(helmet());
-// app.use(validateToken);
+app.use(validateToken);
 
 app.use(`/bookmarks`, bookmarksRouter);
 

@@ -2,7 +2,7 @@ const BookmarksServices = require('../src/bookmarks/bookmarks-services');
 const knex = require('knex');
 const { TEST_DB_URL } = require('../src/config');
 const BOOKMARKS_TABLE = 'bookmarks';
-const { makeBookmarksArray } = require('./bookmarks.fixture');
+const { makeBookmarksArray } = require('./bookmarks-fixtures');
 const app = require('../src/app');
 
 describe(`Bookmarks Services`, ()=>{
@@ -40,7 +40,7 @@ describe(`Bookmarks Services`, ()=>{
         })
 
         it(`getAllBookmarks() resolves by returning all bookmarks`, ()=>{
-            BookmarksServices.getBookmarks(db)
+            return BookmarksServices.getBookmarks(db)
                 .then((result) => {
                     expect(result).to.be.an('array');
                     expect(result.length).to.be.eql(testBookmarks.length);
@@ -50,7 +50,7 @@ describe(`Bookmarks Services`, ()=>{
         it(`getBookmarksById() resolves and returns the requested bookmark`, ()=>{
             const id = 2;
             const expectedBookmark = testBookmarks[id-1];
-            BookmarksServices.getBookmarksById(db, id)
+            return BookmarksServices.getBookmarksById(db, id)
                 .then((result) => {
                     expect(result).to.eql({
                         id: expectedBookmark.id,
@@ -67,7 +67,7 @@ describe(`Bookmarks Services`, ()=>{
     context(`Given the ${BOOKMARKS_TABLE} table has no data `, ()=>{
 
         it(`getAllBookmarks() resolves an empty table and returns an empty array`, ()=>{
-            BookmarksServices.getBookmarks(db)
+            return BookmarksServices.getBookmarks(db)
                 .then((result) => {
                     expect(result).to.eql([]);
                 })
@@ -75,9 +75,28 @@ describe(`Bookmarks Services`, ()=>{
 
         it(`getBookmarksById() resolves and returns an empty array`, ()=>{
             const id = 2;
-            BookmarksServices.getBookmarksById(db, id)
+            return BookmarksServices.getBookmarksById(db, id)
                 .then((result)=>{
                     expect(result).to.eql(undefined);
+                })
+        })
+
+        it(`insertBookmark() adds a new bookmark and gives it an id`, ()=>{
+            const newBookmark = {
+                title: `New Bookmark`,
+                url: `www.testbookmark.com`,
+                description: `Testing to see if it gets added with a new id`,
+                rating: `3.2`
+            }
+            return BookmarksServices.insertBookmark(db, newBookmark)
+                .then((actual) => {
+                    expect(actual).to.eql({
+                        id: 1,
+                        title: newBookmark.title,
+                        url: newBookmark.url,
+                        description: newBookmark.description,
+                        rating: newBookmark.rating
+                    })
                 })
         })
 
