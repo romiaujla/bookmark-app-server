@@ -2,7 +2,7 @@ const express = require('express')
 const { isWebUri } = require('valid-url')
 const xss = require('xss')
 const logger = require('../logger')
-const BookarksService = require('./bookmarks-services');
+const BookmarksService = require('./bookmarks-services');
 
 const bookmarksRouter = express.Router()
 const bodyParser = express.json()
@@ -18,7 +18,7 @@ const serializeBookmark = bookmark => ({
 bookmarksRouter
   .route('/')
   .get((req, res, next) => {
-    BookarksService.getAllBookmarks(req.app.get('db'))
+    BookmarksService.getAllBookmarks(req.app.get('db'))
       .then(bookmarks => {
         res.json(bookmarks.map(serializeBookmark))
       })
@@ -46,7 +46,7 @@ bookmarksRouter
 
     const newBookmark = { title, url, description, rating }
 
-    BookarksService.insertBookmark(
+    BookmarksService.insertBookmark(
       req.app.get('db'),
       newBookmark
     )
@@ -64,7 +64,7 @@ bookmarksRouter
   .route('/:bookmark_id')
   .all((req, res, next) => {
     const { bookmark_id } = req.params
-    BookarksService.getById(req.app.get('db'), bookmark_id)
+    BookmarksService.getById(req.app.get('db'), bookmark_id)
       .then(bookmark => {
         if (!bookmark) {
           logger.error(`Bookmark with id ${bookmark_id} not found.`)
@@ -84,7 +84,7 @@ bookmarksRouter
   .delete((req, res, next) => {
     const db = req.app.get('db');
     const { bookmark_id } = req.params
-    BookarksService.deleteBookmark(
+    BookmarksService.deleteBookmark(
       db,
       bookmark_id
     )
@@ -93,6 +93,35 @@ bookmarksRouter
         res.status(204).end()
       })
       .catch(next)
+  })
+  .patch(bodyParser, (req, res, next)=>{
+      const { title, url, description, rating } = req.body;
+      const bookmarkToUpdate = {
+          title,
+          url,
+          description,
+          rating
+      }
+
+      const numOfValues = Object.values(bookmarkToUpdate).filter(Boolean).length;
+      if(numOfValues === 0){
+          return res
+            .status(400)
+            .json({
+                error: {
+                    message: `Request body must contain either title, url, rating or description`
+                }
+            })
+      }
+      BookmarksService.updateBookmark(
+          req.app.get('db'),
+          req.params.bookmark_id,
+          bookmarkToUpdate
+      )
+        .then((numRowsAffected) => {
+            res.status(204).end();
+        })
+        .catch(next);
   })
 
 module.exports = bookmarksRouter

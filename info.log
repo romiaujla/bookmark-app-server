@@ -1108,3 +1108,125 @@
 {"message":"Unauthorized request to path: /api/bookmarks","level":"error"}
 {"message":"Card with id 1 created.","level":"info"}
 {"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"id is not defined","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"id is not defined","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"id is not defined","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"id is not defined","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"id is not defined","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"BookmarksService.updateBookmark(...).then(...).cathc is not a function","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Empty .update() call detected! Update data does not contain any values to update. This will result in a faulty query.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Empty .update() call detected! Update data does not contain any values to update. This will result in a faulty query.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Empty .update() call detected! Update data does not contain any values to update. This will result in a faulty query.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Empty .update() call detected! Update data does not contain any values to update. This will result in a faulty query.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Empty .update() call detected! Update data does not contain any values to update. This will result in a faulty query.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Empty .update() call detected! Update data does not contain any values to update. This will result in a faulty query.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
+{"message":"Bookmark with id 1234 not found.","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks/2","level":"error"}
