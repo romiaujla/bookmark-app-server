@@ -302,4 +302,15 @@ describe('Bookmarks Endpoints', () => {
         })
     })
   })
+
+  describe.only(`PATCH /api/bookmarks/:bookmars_id`, ()=>{
+      context(`Given no bookmarks in the table`, ()=>{
+          it(`responds with 404`, ()=>{
+              const id = 1234;
+              return request(app)
+                .patch(`/api/bookmarks/${id}`)
+                .expect(404, {error: {message: `Bookmark doesnt exist`}});
+          })
+      })
+  })
 })

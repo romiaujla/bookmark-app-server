@@ -1107,3 +1107,4 @@
 {"message":"Unauthorized request to path: /api/bookmarks/1","level":"error"}
 {"message":"Unauthorized request to path: /api/bookmarks","level":"error"}
 {"message":"Card with id 1 created.","level":"info"}
+{"message":"Unauthorized request to path: /api/bookmarks/1234","level":"error"}
