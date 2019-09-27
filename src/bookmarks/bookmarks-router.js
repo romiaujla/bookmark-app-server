@@ -82,10 +82,10 @@ bookmarksRouter
     res.json(serializeBookmark(res.bookmark))
   })
   .delete((req, res, next) => {
-    // TODO: update to use db
+    const db = req.app.get('db');
     const { bookmark_id } = req.params
     BookarksService.deleteBookmark(
-      req.app.get('db'),
+      db,
       bookmark_id
     )
       .then(numRowsAffected => {

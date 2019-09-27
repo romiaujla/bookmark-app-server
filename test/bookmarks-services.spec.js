@@ -2,7 +2,7 @@ const BookmarksServices = require('../src/bookmarks/bookmarks-services');
 const knex = require('knex');
 const { TEST_DB_URL } = require('../src/config');
 const BOOKMARKS_TABLE = 'bookmarks';
-const { makeBookmarksArray } = require('./bookmarks-fixtures');
+const { makeBookmarksServicesArray } = require('./bookmarks-fixtures');
 const app = require('../src/app');
 
 describe(`Bookmarks Services`, ()=>{
@@ -31,7 +31,7 @@ describe(`Bookmarks Services`, ()=>{
 
     context(`Given the ${BOOKMARKS_TABLE} table has data`, ()=>{
 
-        const testBookmarks = makeBookmarksArray();
+        const testBookmarks = makeBookmarksServicesArray();
 
         beforeEach(`Add data to the test table`, ()=>{
             return db
@@ -44,7 +44,7 @@ describe(`Bookmarks Services`, ()=>{
                 .then((result) => {
                     expect(result).to.be.an('array');
                     expect(result.length).to.be.eql(testBookmarks.length);
-                    expect(result).to.deep.eql()
+                    expect(result).to.deep.eql(testBookmarks);
                 });
         });
 
