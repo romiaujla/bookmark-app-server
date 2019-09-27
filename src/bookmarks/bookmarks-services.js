@@ -6,6 +6,13 @@ const BookmarksServices = {
             .select('*')
             .from(BOOKMARKS_TABLE);
     },
+    getBookmarksById(db, id){
+        return db
+            .select('*')
+            .from(BOOKMARKS_TABLE)
+            .where('id', id)
+            .first();
+    }
 }
 
 module.exports = BookmarksServices;

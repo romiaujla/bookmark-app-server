@@ -2,6 +2,7 @@ const logger = require('./logger');
 const { NODE_ENV } = require('./config');
 
 function errorhandler(error, req, res, next){
+    console.log(error);
     let response  = '';
     if(NODE_ENV === 'production'){
         response = {
