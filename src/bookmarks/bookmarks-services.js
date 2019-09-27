@@ -5,5 +5,7 @@ const BookmarksServices = {
         return db
             .select('*')
             .from(BOOKMARKS_TABLE);
-    }
+    },
 }
+
+module.exports = BookmarksServices;
